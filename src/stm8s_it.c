@@ -27,8 +27,11 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm8s_it.h"
-
+#include "main.h"
 #include "milis.h"
+#include "sonboard.h"
+
+extern uint8_t led_pointer;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -283,9 +286,22 @@ INTERRUPT_HANDLER(TIM1_CAP_COM_IRQHandler, 12)
   */
  INTERRUPT_HANDLER(TIM2_CAP_COM_IRQHandler, 14)
 {
-  /* In order to detect unexpected events during development,
-     it is recommended to set a breakpoint on the following instruction.
-  */
+  TIM3_ClearFlag(TIM3_FLAG_UPDATE);
+  if (led_pointer == 0) {
+    LOW(LED2);
+    LOW(LED3);
+    REVERSE(SB_LED1);
+  }
+  else if (led_pointer == 1) {
+    LOW(LED1);
+    LOW(LED3);
+    REVERSE(LED2);
+  }
+  else if (led_pointer == 2) {
+    LOW(LED1);
+    LOW(LED2);
+    REVERSE(LED3);
+  }   
 }
 #endif /*STM8S903*/
 
