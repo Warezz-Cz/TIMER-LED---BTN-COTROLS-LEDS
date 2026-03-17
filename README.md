@@ -14,7 +14,7 @@ TIMER LED_BTN controls LEDS project
 Schéma zapojení
 -----------------------
 
-![schéma zapojení]()
+![schéma zapojení](./docs/schéma%20timer%20projekt%20readme.png)
 
 Popis funkce
 -----------------------
@@ -24,13 +24,10 @@ Popis funkce
 3. Přepínač LED reaguje na náběžnou hranu (stisk tlačítka) a pomocí milis kontroluje stav tlačítka každých 30 ms
 4. proměnná led_pointer která v rutině přerušení říká, která LED má zrovna svítit je definována uint_8 => proto je nastavená aby se po hodnotě 2 vratila zpět na 0
 
-ToDo
------------------------
-
-* Vyzkoušet na desce
-* Popřípadě opravit chyby, které se najdou po testu
-
 Zhodnocení
 -----------------------
 
-
+Zapojení mi dalo zabrat. Museli jsme se spolužákem chvilku přemýšlet jak to udělat.
+Nakonec to nebyl tak těžký projekt. timer se dal docela pochopit a když s ním ještě budu pracovat tak pochopím ten zbytek co mi chybí.
+Poprvé jsme použili sonboard. Chvilku jsem s tím bojoval, protože je zapojen jinak jak deska ve škole, ale nakonec se to podařilo rozjet.
+Projekt byl zajímavý a naučil mě něco co se dá využít v dalších pracích na STMku. 
