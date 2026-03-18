@@ -14,7 +14,7 @@ TIMER LED_BTN controls LEDS project
 Schéma zapojení
 -----------------------
 
-![schéma zapojení](./docs/schéma%20timer%20projekt%20readme.png)
+![schéma zapojení](./docs/TIMSCHEME.png)
 
 Popis funkce
 -----------------------

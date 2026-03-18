@@ -31,7 +31,7 @@
 #include "milis.h"
 #include "sonboard.h"
 
-uint8_t led_pointer = 1;
+uint8_t led_pointer = 0;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
